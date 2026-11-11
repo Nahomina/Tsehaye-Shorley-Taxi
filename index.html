@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet" />
+<script>
+  // Set the theme before first paint: follow the system setting until the visitor toggles it.
+  (function(){ try {
+    var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  } catch(e){ document.documentElement.setAttribute("data-theme", "light"); } })();
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310304e'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='38' font-weight='800' fill='%23ffcc00' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+<title>Shorley Taxi Flawil, Inhaber Tsehaye, Taxi in Flawil, Uzwil, Oberuzwil, St. Gallen und Flughafentransfer Zürich, 24/7</title>
+<meta name="description" content="Shorley Taxi in Flawil, Inhaber Tsehaye: Ihr Taxi für Flawil, Uzwil, Oberuzwil, St. Gallen und den Flughafen Zürich. 24 Stunden, 7 Tage die Woche. Tel. +41 77 996 44 98." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TaxiService","name":"Shorley Taxi","founder":{"@type":"Person","name":"Tsehaye"},"telephone":"+41 77 996 44 98","address":{"@type":"PostalAddress","addressLocality":"Flawil","addressRegion":"St. Gallen","addressCountry":"CH"},"areaServed":["Flawil","Uzwil","Oberuzwil","St. Gallen","Flughafen Zürich"],"openingHours":"Mo-Su 00:00-24:00","currenciesAccepted":"CHF","paymentAccepted":"Cash, Credit Card"}
+</script>
+<style>
+  button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]), a.btn, a.callbtn { min-height: 2.75rem; }
+  * { box-sizing: border-box; }
+  :root{
+    color-scheme: light;
+    --bg:#fbfaf7; --bg-alt:#f1efe8; --surface:#ffffff;
+    --ink:#1b2430; --ink-soft:#52606e; --line:#ddd8cc;
+    --navy:#173f63; --navy-dark:#10304e; --yellow:#ffcc00; --yellow-ink:#1a1a1a;
+    --green:#1faa55; --green-dark:#178a44;
+    --header-bg:#fbfaf7; --footer-bg:#10304e; --footer-ink:#dbe6f2;
+    --table-head:#173f63; --table-head-ink:#ffffff;
+    --link:#173f63;
+    --shadow:0 1px 3px rgba(23,48,78,.10);
+    --shadow-lg:0 14px 30px -12px rgba(23,48,78,.28);
+    --accent-soft:#fdf3cd;
+    --font-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --font-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --font-serif:"Source Serif 4",Georgia,serif;
+  }
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --bg:#0f141a; --bg-alt:#151d25; --surface:#1a232e;
+    --ink:#e9eef4; --ink-soft:#a7b4c0; --line:#33404d;
+    --navy:#7fb0e6; --navy-dark:#a9cbf2; --yellow:#ffcc00; --yellow-ink:#1a1a1a;
+    --green:#2abb66; --green-dark:#5fd68d;
+    --header-bg:#121a22; --footer-bg:#0a141f; --footer-ink:#c3d2e2;
+    --table-head:#1d3a5c; --table-head-ink:#ffffff;
+    --link:#8fb8e8;
+    --shadow:0 1px 3px rgba(0,0,0,.4);
+    --shadow-lg:0 14px 30px -12px rgba(0,0,0,.6);
+    --accent-soft:#2a2410;
+  }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; font-family:var(--font-body); background:var(--bg); color:var(--ink); line-height:1.6; font-size:16px; -webkit-font-smoothing:antialiased; transition:background-color .35s ease, color .35s ease; }
+  img{ max-width:100%; display:block; }
+  a{ color:var(--link); }
+  h1,h2,h3,.brand .name,.btn,.strip .item b,table.tarife th{ font-family:var(--font-display); }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 16px; }
+
+  /* Header */
+  header.site{ background:var(--header-bg); border-bottom:3px solid var(--yellow); position:sticky; top:0; z-index:50; box-shadow:var(--shadow); transition:background-color .35s ease; }
+  .header-in{ display:flex; align-items:center; gap:10px; padding:10px 0; flex-wrap:wrap; }
+  .brand{ text-decoration:none; color:var(--ink); line-height:1.15; margin-right:auto; }
+  .brand .name{ font-size:24px; font-weight:800; letter-spacing:-.01em; color:var(--ink); }
+  .brand .name span{ color:var(--navy); }
+  .brand .sub{ font-size:13px; color:var(--ink-soft); font-family:var(--font-serif); font-style:italic; }
+  .lang-switch{ display:flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; }
+  .lang-switch button{ border:0; background:var(--surface); color:var(--ink-soft); font:inherit; font-size:14px; font-weight:700; padding:10px 14px; cursor:pointer; min-width:48px; transition:background-color .25s ease, color .25s ease; }
+  .lang-switch button:hover{ color:var(--ink); }
+  .lang-switch button[aria-pressed="true"]{ background:var(--navy); color:#fff; }
+  :root[data-theme="dark"] .lang-switch button[aria-pressed="true"]{ color:#0f141a; }
+  .theme-toggle{ display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--ink); cursor:pointer; transition:transform .3s ease, background-color .25s ease, border-color .25s ease; }
+  .theme-toggle:hover{ transform:rotate(18deg) scale(1.06); border-color:var(--yellow); }
+  .theme-toggle .icon-sun{ display:none; }
+  :root[data-theme="dark"] .theme-toggle .icon-sun{ display:block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon{ display:none; }
+  .header-call{ display:inline-flex; align-items:center; gap:8px; background:var(--yellow); color:var(--yellow-ink); font-weight:700; text-decoration:none; padding:10px 16px; border-radius:999px; font-size:16px; transition:transform .25s ease, box-shadow .25s ease; }
+  .header-call:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lg); }
+  nav.main{ border-top:1px solid var(--line); }
+  nav.main .wrap{ display:flex; gap:4px; flex-wrap:wrap; padding-top:0; padding-bottom:0; }
+  nav.main a{ color:var(--ink); text-decoration:none; font-size:15px; font-weight:600; padding:11px 12px; display:inline-block; position:relative; }
+  nav.main a::after{ content:""; position:absolute; left:12px; right:12px; bottom:6px; height:2px; background:var(--yellow); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+  nav.main a:hover::after{ transform:scaleX(1); }
+  @media (max-width:640px){ nav.main{ display:none; } .brand .name{ font-size:21px; } }
+
+  /* Hero */
+  .hero{ background:var(--bg-alt); border-bottom:1px solid var(--line); }
+  .hero-in{ display:grid; grid-template-columns:1fr 1fr; gap:28px; padding:34px 0 38px; align-items:center; }
+  @media (max-width:820px){ .hero-in{ grid-template-columns:1fr; padding:24px 0 28px; } }
+  .hero h1{ font-size:36px; font-weight:800; letter-spacing:-.02em; line-height:1.15; margin:0 0 12px; }
+  @media (max-width:640px){ .hero h1{ font-size:28px; } }
+  .hero p.lead{ font-size:17px; color:var(--ink-soft); margin:0 0 20px; }
+  .cta-row{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px; }
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:9px; font-weight:700; font-size:17px; text-decoration:none; padding:13px 22px; border-radius:999px; border:1px solid transparent; cursor:pointer; font-family:var(--font-display); transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease; }
+  .btn:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lg); }
+  .btn:active{ transform:translateY(0); }
+  .btn-call{ background:var(--yellow); color:var(--yellow-ink); border-color:#d9ad00; }
+  .btn-wa{ background:var(--green); color:#fff; border-color:var(--green-dark); }
+  .btn-navy{ background:var(--navy); color:#fff; }
+  :root[data-theme="dark"] .btn-navy{ color:#0f141a; }
+  .btn-outline{ background:var(--surface); color:var(--ink); border-color:var(--line); }
+  .driver-line{ font-size:16px; margin:0 0 18px; color:var(--ink); }
+  .driver-line strong{ font-family:var(--font-display); }
+  .fan-row{ display:flex; align-items:center; gap:14px; margin:0 0 22px; padding:12px 16px; background:var(--surface); border:1px solid var(--line); border-radius:12px; max-width:560px; }
+  .fan-crest{ width:56px; height:auto; flex:0 0 auto; background:#fff; padding:4px; border-radius:8px; }
+  .fan-row span{ font-size:16px; font-weight:600; }
+  .hero .phone-big{ font-size:22px; font-weight:700; font-family:var(--font-display); }
+  .hero .phone-big a{ text-decoration:none; }
+  .hero-photo{ margin:0; }
+  .hero-photo .frame{ overflow:hidden; border-radius:10px; border:1px solid var(--line); box-shadow:var(--shadow-lg); }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; filter:saturate(1.06) contrast(1.03); animation:kenburns 26s ease-in-out infinite alternate; will-change:transform; }
+  .hero-photo:hover img{ animation-play-state:paused; }
+  @keyframes kenburns{ from{ transform:scale(1) translateX(0); } to{ transform:scale(1.09) translateX(-1.5%); } }
+  .hero-photo figcaption{ font-size:13.5px; color:var(--ink-soft); margin-top:8px; font-family:var(--font-serif); font-style:italic; }
+
+  /* Info strip */
+  .strip{ background:#173f63; color:#fff; }
+  :root[data-theme="dark"] .strip{ background:#101c29; }
+  .strip .wrap{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+  @media (max-width:820px){ .strip .wrap{ grid-template-columns:1fr 1fr; } }
+  .strip .item{ display:flex; gap:10px; align-items:flex-start; padding:16px 14px; transition:background-color .25s ease; }
+  .strip .item:hover{ background:rgba(255,255,255,.06); }
+  .strip .item svg{ flex:0 0 auto; margin-top:2px; }
+  .strip .item b{ display:block; font-size:15px; }
+  .strip .item span{ font-size:13.5px; color:#cfe0f2; }
+
+  /* Sections */
+  section.block{ padding:42px 0; }
+  section.block.alt{ background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  h2{ font-size:27px; font-weight:800; letter-spacing:-.015em; margin:0 0 6px; line-height:1.25; }
+  .section-intro{ color:var(--ink-soft); margin:0 0 22px; max-width:720px; }
+  h3{ font-size:18px; font-weight:700; margin:0 0 6px; }
+
+  /* Scroll reveal: elements are only hidden once JS confirms IntersectionObserver support (html.reveal-on) */
+  html.reveal-on .reveal{ opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1); }
+  html.reveal-on .reveal.in{ opacity:1; transform:none; }
+
+  .svc-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:700px){ .svc-grid{ grid-template-columns:1fr; } }
+  .svc{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:20px; display:flex; gap:14px; transition:transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s ease, border-color .35s ease; }
+  .svc:hover{ transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:var(--yellow); }
+  .svc .ic{ flex:0 0 auto; width:46px; height:46px; border-radius:10px; background:var(--accent-soft); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--navy); transition:transform .35s ease, background-color .35s ease, color .35s ease; }
+  .svc:hover .ic{ background:var(--yellow); color:#1a1a1a; transform:rotate(-6deg) scale(1.07); }
+  .svc p{ margin:0; color:var(--ink-soft); font-size:15px; }
+  .svc.feature{ border-color:var(--navy); border-width:2px; }
+  .svc.feature:hover{ border-color:var(--yellow); }
+
+  .area-list{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; list-style:none; margin:0 0 14px; padding:0; }
+  @media (max-width:820px){ .area-list{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:480px){ .area-list{ grid-template-columns:1fr; } }
+  .area-list li{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:16px 18px; transition:transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s ease, border-color .35s ease; }
+  .area-list li:hover{ transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:var(--yellow); }
+  .area-list .place{ font-weight:700; font-size:17px; display:flex; align-items:center; gap:8px; color:var(--ink); font-family:var(--font-display); }
+  .area-list .place svg{ transition:transform .35s ease, color .35s ease; }
+  .area-list li:hover .place svg{ transform:translateY(-3px); color:var(--green-dark); }
+  .area-list .note{ color:var(--ink-soft); font-size:14px; margin-top:2px; }
+  .area-list a.maplink{ font-size:14px; display:inline-block; margin-top:6px; padding:4px 0; }
+
+  /* Tariffs */
+  .tarif-table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+  table.tarife{ border-collapse:collapse; width:100%; min-width:520px; }
+  table.tarife th, table.tarife td{ padding:13px 16px; text-align:right; border-bottom:1px solid var(--line); font-size:16px; }
+  table.tarife th:first-child, table.tarife td:first-child{ text-align:left; }
+  table.tarife thead th{ background:var(--table-head); color:var(--table-head-ink); font-size:17px; }
+  table.tarife tbody tr{ transition:background-color .2s ease; }
+  table.tarife tbody tr:nth-child(even){ background:var(--bg-alt); }
+  table.tarife tbody tr:hover{ background:var(--accent-soft); }
+  table.tarife td.num{ font-weight:700; font-variant-numeric:tabular-nums; }
+  @media (max-width:600px){
+    table.tarife{ min-width:0; }
+    table.tarife th, table.tarife td{ padding:10px 8px; font-size:14px; }
+    table.tarife thead th{ font-size:15px; }
+    table.tarife .chf{ display:none; }
+  }
+  .tarif-notes{ color:var(--ink-soft); font-size:15px; margin:14px 0 0; }
+  .pay-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+  .pay-chip{ background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:9px 16px; font-weight:700; font-size:15px; display:inline-flex; align-items:center; gap:8px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .pay-chip:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lg); border-color:var(--yellow); }
+  figure.tarif-photo{ margin:22px 0 0; }
+  figure.tarif-photo img{ border:1px solid var(--line); border-radius:10px; background:#fff; width:100%; }
+  figure.tarif-photo figcaption{ font-size:13.5px; color:var(--ink-soft); margin-top:6px; font-family:var(--font-serif); font-style:italic; }
+
+  /* Vehicle */
+  .vehicle-grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; align-items:start; }
+  @media (max-width:820px){ .vehicle-grid{ grid-template-columns:1fr; } }
+  .gallery{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .gallery figure{ margin:0; }
+  .gallery figure:first-child{ grid-column:1 / -1; }
+  .gallery .frame{ overflow:hidden; border-radius:10px; border:1px solid var(--line); }
+  .gallery img{ width:100%; height:auto; filter:saturate(1.06) contrast(1.03); transition:transform .8s cubic-bezier(.22,.61,.36,1), filter .5s ease; }
+  .gallery figure:hover img{ transform:scale(1.06); filter:saturate(1.14) contrast(1.05); }
+  .gallery figcaption{ font-size:13px; color:var(--ink-soft); margin-top:5px; font-family:var(--font-serif); font-style:italic; }
+  ul.tick{ list-style:none; margin:14px 0 0; padding:0; }
+  ul.tick li{ padding:7px 0 7px 30px; position:relative; border-bottom:1px solid var(--line); }
+  ul.tick li:last-child{ border-bottom:0; }
+  ul.tick li::before{ content:"✓"; position:absolute; left:4px; top:7px; font-weight:700; color:var(--green-dark); }
+
+  /* Booking steps */
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 24px; }
+  @media (max-width:700px){ .steps{ grid-template-columns:1fr; } }
+  .step{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:18px; transition:transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s ease, border-color .35s ease; }
+  .step:hover{ transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:var(--yellow); }
+  .step .num{ font-family:var(--font-serif); font-style:italic; font-size:26px; color:var(--navy); display:block; line-height:1; margin-bottom:8px; }
+  .step b{ display:block; font-family:var(--font-display); font-size:16px; margin-bottom:4px; }
+  .step p{ margin:0; color:var(--ink-soft); font-size:14.5px; }
+
+  /* Contact */
+  .contact-grid{ display:grid; grid-template-columns:5fr 7fr; gap:26px; align-items:start; }
+  @media (max-width:820px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-box{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:22px; transition:box-shadow .35s ease, border-color .35s ease; }
+  .contact-box:hover{ box-shadow:var(--shadow-lg); border-color:var(--yellow); }
+  .contact-box .big-tel{ font-size:26px; font-weight:800; font-family:var(--font-display); letter-spacing:-.01em; margin:4px 0 2px; }
+  .contact-box .big-tel a{ text-decoration:none; }
+  .contact-box dl{ margin:16px 0 0; }
+  .contact-box dt{ font-weight:700; font-size:14px; color:var(--ink-soft); margin-top:12px; }
+  .contact-box dd{ margin:2px 0 0; font-size:16px; }
+  form.book{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:22px; transition:box-shadow .35s ease, border-color .35s ease; }
+  form.book:hover{ box-shadow:var(--shadow-lg); }
+  form.book .row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media (max-width:560px){ form.book .row{ grid-template-columns:1fr; } }
+  form.book label{ display:block; font-weight:700; font-size:14px; margin:0 0 12px; }
+  form.book input, form.book textarea, form.book select{ width:100%; margin-top:5px; padding:11px 12px; font:inherit; font-size:16px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); transition:border-color .25s ease, box-shadow .25s ease; }
+  form.book input:focus, form.book textarea:focus, form.book select:focus{ outline:none; border-color:var(--yellow); box-shadow:0 0 0 3px var(--accent-soft); }
+  form.book textarea{ min-height:76px; resize:vertical; }
+  form.book .hint{ font-size:13.5px; color:var(--ink-soft); margin:10px 0 0; }
+  .form-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px; }
+
+  footer.site{ background:var(--footer-bg); color:var(--footer-ink); padding:30px 0 90px; margin-top:0; }
+  @media (min-width:821px){ footer.site{ padding-bottom:30px; } }
+  footer.site .cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  @media (max-width:700px){ footer.site .cols{ grid-template-columns:1fr; } }
+  footer.site b{ color:#fff; display:block; margin-bottom:6px; font-size:16px; font-family:var(--font-display); }
+  footer.site a{ color:var(--footer-ink); }
+  footer.site p{ margin:0 0 6px; font-size:14.5px; }
+  footer.site .fineprint{ border-top:1px solid rgba(255,255,255,.22); margin-top:22px; padding-top:14px; font-size:13px; color:#9db4cc; }
+
+  /* Sticky mobile call bar */
+  .sticky-bar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:var(--surface); border-top:1px solid var(--line); padding:8px 10px calc(8px + env(safe-area-inset-bottom)); gap:8px; box-shadow:0 -2px 8px rgba(0,0,0,.12); }
+  .sticky-bar a{ flex:1; }
+  @media (max-width:820px){ .sticky-bar{ display:flex; } }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .hero-photo img{ animation:none; }
+    html.reveal-on .reveal{ opacity:1; transform:none; transition:none; }
+    .svc, .area-list li, .step, .btn, .gallery img, .theme-toggle{ transition:none; }
+    .svc:hover, .area-list li:hover, .step:hover, .btn:hover, .gallery figure:hover img{ transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap header-in">
+    <a class="brand" href="#top">
+      <span class="name">TSEHAYE SHORLEY <span>TAXI</span></span><br />
+      <span class="sub" data-i18n="brandSub">Flawil · Kanton St. Gallen · 24/7</span>
+    </a>
+    <div class="lang-switch" role="group" aria-label="Language / Sprache">
+      <button type="button" id="btn-de" aria-pressed="true">DE</button>
+      <button type="button" id="btn-en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Dark Mode / Light Mode umschalten" title="Dark Mode / Light Mode">
+      <svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+  </div>
+  <nav class="main" aria-label="Hauptmenü">
+    <div class="wrap">
+      <a href="#leistungen" data-i18n="navServices">Leistungen</a>
+      <a href="#einsatzgebiet" data-i18n="navArea">Einsatzgebiet</a>
+      <a href="#tarife" data-i18n="navTariffs">Tarife</a>
+      <a href="#fahrzeug" data-i18n="navVehicle">Fahrzeug</a>
+      <a href="#ueber-uns" data-i18n="navAbout">Ihr Fahrer</a>
+      <a href="#kontakt" data-i18n="navContact">Kontakt &amp; Buchung</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <h1 data-i18n="heroTitle">Ihr Taxi in Flawil und St. Gallen. Tag und Nacht für Sie da.</h1>
+        <p class="lead" data-i18n="heroLead">Shorley Taxi bringt Sie zuverlässig und pünktlich ans Ziel, in Flawil, Uzwil, Oberuzwil und St. Gallen sowie zum Flughafen Zürich. Ein Anruf genügt, wir sind rund um die Uhr erreichbar.</p>
+        <p class="driver-line" data-i18n="driverLine">Ihr Fahrer: <strong>Tsehaye Tesfai</strong> holt Sie persönlich ab.</p>
+        <div class="cta-row">
+          <a class="btn btn-call" href="tel:+41779964498">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span data-i18n="callNow">Jetzt anrufen</span>
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/41779964498" target="_blank" rel="noopener">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="phone-big"><span data-i18n="phoneLabel">Telefon:</span> <a href="tel:+41779964498">+41 77 996 44 98</a></div>
+        <div class="fan-row">
+          <img class="fan-crest" src="fcn-crest.jpg" alt="Wappen des FC Niederstetten" data-i18n-alt="fanCrestAlt" />
+          <span data-i18n="fanText">Stolzer Fan des FC Niederstetten.</span>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <div class="frame">
+          <img src="hero-car.jpg" alt="Weisser Škoda Octavia Combi von Shorley Taxi, Frontansicht" data-i18n-alt="heroAlt" />
+        </div>
+        <figcaption data-i18n="heroCaption">Unser Fahrzeug: Škoda Octavia Combi (2023)</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- INFO STRIP -->
+  <div class="strip">
+    <div class="wrap">
+      <div class="item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><b data-i18n="strip1t">24 Stunden / 7 Tage</b><span data-i18n="strip1s">Auch nachts, an Sonntagen und Feiertagen</span></div>
+      </div>
+      <div class="item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><b data-i18n="strip2t">Standort Flawil</b><span data-i18n="strip2s">Schnell vor Ort in der Region</span></div>
+      </div>
+      <div class="item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <div><b data-i18n="strip3t">Barzahlung und Kartenzahlung</b><span data-i18n="strip3s">Visa, Mastercard</span></div>
+      </div>
+      <div class="item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg>
+        <div><b data-i18n="strip4t">Vorbestellung möglich</b><span data-i18n="strip4s">Fahrt einfach im Voraus reservieren</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="block" id="leistungen">
+    <div class="wrap">
+      <h2 data-i18n="svcTitle">Unsere Leistungen</h2>
+      <p class="section-intro" data-i18n="svcIntro">Ob kurze Fahrt in der Region oder Flughafentransfer: Rufen Sie uns an oder schreiben Sie uns per WhatsApp, wir sind für Sie da.</p>
+      <div class="svc-grid">
+        <div class="svc feature reveal">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 2 15 22 11 13 2 9 22 2"/><line x1="22" y1="2" x2="11" y2="13"/></svg></div>
+          <div>
+            <h3 data-i18n="svc1t">Flughafentransfer Zürich</h3>
+            <p data-i18n="svc1p">Pünktlich zum Flughafen Zürich und wieder zurück, auch für frühe Abflüge und späte Ankünfte. Wir holen Sie an Ihrer Adresse ab, mit viel Platz für Ihr Gepäck im grossen Kofferraum.</p>
+          </div>
+        </div>
+        <div class="svc reveal">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <h3 data-i18n="svc2t">Fahrten in der Region</h3>
+            <p data-i18n="svc2p">Kurze und längere Fahrten in Flawil, Uzwil, Oberuzwil und St. Gallen, zum Bahnhof, zum Arzt, zum Einkaufen oder zu Besuch bei Familie und Freunden.</p>
+          </div>
+        </div>
+        <div class="svc reveal">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h-2v-11a1 1 0 0 1 1-1h9v12"/><path d="M14 8h4l3 4v5h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+          <div>
+            <h3 data-i18n="svc3t">Fernfahrten</h3>
+            <p data-i18n="svc3p">Längere Fahrten in der ganzen Schweiz nach Vereinbarung. Fragen Sie uns einfach an. Wir machen Ihnen gerne ein Angebot für Ihre Strecke.</p>
+          </div>
+        </div>
+        <div class="svc reveal">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div>
+            <h3 data-i18n="svc4t">Vorbestellung</h3>
+            <p data-i18n="svc4p">Sie kennen Ihren Termin schon im Voraus? Reservieren Sie per Telefon oder WhatsApp, wir sind pünktlich zum vereinbarten Zeitpunkt für Sie da.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="block alt" id="einsatzgebiet">
+    <div class="wrap">
+      <h2 data-i18n="areaTitle">Einsatzgebiet</h2>
+      <p class="section-intro" data-i18n="areaIntro">Unser Standort ist Flawil. Von dort fahren wir für Sie in der Region und zum Flughafen Zürich. Andere Ziele gerne auf Anfrage.</p>
+      <ul class="area-list">
+        <li class="reveal">
+          <span class="place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Flawil</span>
+          <div class="note" data-i18n="areaFlawil">Unser Standort, schnell bei Ihnen</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Flawil+Schweiz" target="_blank" rel="noopener" data-i18n="mapLink">Auf Karte ansehen</a>
+        </li>
+        <li class="reveal">
+          <span class="place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Uzwil</span>
+          <div class="note" data-i18n="areaTown">Fahrten von und nach Uzwil</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Uzwil+Schweiz" target="_blank" rel="noopener" data-i18n="mapLink2">Auf Karte ansehen</a>
+        </li>
+        <li class="reveal">
+          <span class="place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Oberuzwil</span>
+          <div class="note" data-i18n="areaTown2">Fahrten von und nach Oberuzwil</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Oberuzwil+Schweiz" target="_blank" rel="noopener" data-i18n="mapLink3">Auf Karte ansehen</a>
+        </li>
+        <li class="reveal">
+          <span class="place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> St. Gallen</span>
+          <div class="note" data-i18n="areaTown3">Fahrten von und nach St. Gallen</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=St.+Gallen+Schweiz" target="_blank" rel="noopener" data-i18n="mapLink4">Auf Karte ansehen</a>
+        </li>
+        <li class="reveal">
+          <span class="place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 2 15 22 11 13 2 9 22 2"/><line x1="22" y1="2" x2="11" y2="13"/></svg> <span data-i18n="areaAirportName">Flughafen Zürich</span></span>
+          <div class="note" data-i18n="areaAirport">Flughafentransfer, hin und zurück</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Flughafen+Z%C3%BCrich" target="_blank" rel="noopener" data-i18n="mapLink5">Auf Karte ansehen</a>
+        </li>
+        <li class="reveal">
+          <span class="place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <span data-i18n="areaOtherName">Andere Ziele</span></span>
+          <div class="note" data-i18n="areaOther">Weitere Ziele auf Anfrage. Rufen Sie uns an</div>
+          <a class="maplink" href="tel:+41779964498" data-i18n="areaCall">Jetzt anfragen: +41 77 996 44 98</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TARIFFS -->
+  <section class="block" id="tarife">
+    <div class="wrap">
+      <h2 data-i18n="tarTitle">Tarife</h2>
+      <p class="section-intro" data-i18n="tarIntro">Unsere Preise auf einen Blick. Es gelten die im Fahrzeug ausgehängten Tarife.</p>
+      <div class="tarif-table-wrap">
+        <table class="tarife">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="tarHead">Tarif</th>
+              <th scope="col">Tarif 1</th>
+              <th scope="col">Tarif 2</th>
+              <th scope="col">Tarif 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="tarBase">Grundgebühr (Basis)</td>
+              <td class="num"><span class="chf">CHF </span>8.00</td>
+              <td class="num"><span class="chf">CHF </span>6.00</td>
+              <td class="num"><span class="chf">CHF </span>6.00</td>
+            </tr>
+            <tr>
+              <td data-i18n="tarKm">Preis pro Kilometer</td>
+              <td class="num"><span class="chf">CHF </span>4.00</td>
+              <td class="num"><span class="chf">CHF </span>2.60</td>
+              <td class="num"><span class="chf">CHF </span>3.00</td>
+            </tr>
+            <tr>
+              <td data-i18n="tarMin">Preis pro Minute</td>
+              <td class="num"><span class="chf">CHF </span>1.33</td>
+              <td class="num"><span class="chf">CHF </span>0.90</td>
+              <td class="num"><span class="chf">CHF </span>1.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tarif-notes" data-i18n="tarNote">Alle Preise in Schweizer Franken (CHF). Welcher Tarif zur Anwendung kommt und was er im Einzelnen abdeckt, erklären wir Ihnen gerne vor der Fahrt am Telefon.</p>
+      <div class="pay-row" aria-label="Zahlungsarten">
+        <span class="pay-chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/></svg> <span data-i18n="payCash">Barzahlung</span></span>
+        <span class="pay-chip">VISA</span>
+        <span class="pay-chip">Mastercard</span>
+      </div>
+      <figure class="tarif-photo">
+        <img loading="lazy" decoding="async" src="tarif.jpg" alt="Tarifkarte aus dem Fahrzeug: Tarif 1, 2 und 3 mit Grundgebühr, Preis pro Kilometer und Preis pro Minute" data-i18n-alt="tarAlt" />
+        <figcaption data-i18n="tarCaption">Der Tarifaushang aus unserem Fahrzeug.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- VEHICLE -->
+  <section class="block alt" id="fahrzeug">
+    <div class="wrap">
+      <h2 data-i18n="vehTitle">Unser Fahrzeug</h2>
+      <p class="section-intro">Škoda Octavia Combi · <span data-i18n="vehYear">Baujahr</span> 2023</p>
+      <div class="vehicle-grid">
+        <div>
+          <p data-i18n="vehText">Sie fahren in einem modernen, gepflegten Škoda Octavia Combi. Der geräumige Kombi bietet bequemen Platz für Fahrgäste und einen grossen Kofferraum, ideal auch für Flughafenfahrten mit viel Gepäck.</p>
+          <ul class="tick">
+            <li data-i18n="vehF1">Grosser Kofferraum, viel Platz für Gepäck und Einkäufe</li>
+            <li data-i18n="vehF2">Bequeme Sitze und ruhige Fahrt</li>
+            <li data-i18n="vehF3">Gepflegtes, sauberes Fahrzeug</li>
+            <li data-i18n="vehF4">Kartenzahlung direkt im Fahrzeug möglich</li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <figure class="reveal">
+            <div class="frame"><img loading="lazy" decoding="async" src="gal-angled.jpg" alt="Škoda Octavia Combi von Shorley Taxi, Ansicht von vorne seitlich" data-i18n-alt="galAlt1" /></div>
+          </figure>
+          <figure class="reveal">
+            <div class="frame"><img loading="lazy" decoding="async" src="gal-front.jpg" alt="Škoda Octavia Combi von Shorley Taxi, Frontansicht" data-i18n-alt="galAlt2" /></div>
+            <figcaption data-i18n="galCap">Frontansicht</figcaption>
+          </figure>
+          <figure class="reveal">
+            <div class="frame"><img loading="lazy" decoding="async" src="gal-side.jpg" alt="Škoda Octavia Combi von Shorley Taxi, Seitenansicht" data-i18n-alt="galAlt3" /></div>
+            <figcaption data-i18n="galCap2">Seitenansicht</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block" id="ueber-uns">
+    <div class="wrap">
+      <h2 data-i18n="aboutTitle">Tsehaye und Shorley Taxi</h2>
+      <p class="section-intro" style="max-width:820px" data-i18n="aboutText">Shorley Taxi ist Ihr persönlicher Taxiservice in Flawil, geführt von Inhaber Tsehaye. Bei uns wissen Sie immer, wer Sie abholt: ein Fahrer, ein Fahrzeug, ein Ansprechpartner. Zuverlässig, pünktlich und rund um die Uhr erreichbar, für Fahrten in der Region und zum Flughafen Zürich.</p>
+      <div class="cta-row">
+        <a class="btn btn-navy" href="tel:+41779964498"><span data-i18n="aboutCall">Anrufen: +41 77 996 44 98</span></a>
+        <a class="btn btn-outline" href="#kontakt" data-i18n="aboutBook">Fahrt vorbestellen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / BOOKING -->
+  <section class="block alt" id="kontakt">
+    <div class="wrap">
+      <h2 data-i18n="ctTitle">Kontakt &amp; Buchung</h2>
+      <p class="section-intro" data-i18n="ctIntro">Eine Buchung ist nicht nötig: Für eine Fahrt sofort rufen Sie uns einfach an. Das Formular ist nur für Vorbestellungen gedacht, wenn Sie Ihre Fahrt im Voraus planen möchten.</p>
+      <div class="steps">
+        <div class="step reveal">
+          <span class="num">1</span>
+          <b data-i18n="step1t">Formular ausfüllen</b>
+          <p data-i18n="step1p">Tragen Sie Abholort, Ziel, Datum und Uhrzeit ein. Das dauert keine Minute.</p>
+        </div>
+        <div class="step reveal">
+          <span class="num">2</span>
+          <b data-i18n="step2t">In WhatsApp prüfen und senden</b>
+          <p data-i18n="step2p">Beim Absenden öffnet sich WhatsApp mit Ihrer fertigen Anfrage. Sie prüfen sie dort und senden sie selbst ab, ohne Konto und ohne Registrierung.</p>
+        </div>
+        <div class="step reveal">
+          <span class="num">3</span>
+          <b data-i18n="step3t">Bestätigung erhalten</b>
+          <p data-i18n="step3p">Wir melden uns kurz zurück und bestätigen Ihre Fahrt. Bezahlt wird erst im Fahrzeug, bar oder mit Karte.</p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <div data-i18n="ctPhoneLabel">Telefon / WhatsApp</div>
+          <div class="big-tel"><a href="tel:+41779964498">+41 77 996 44 98</a></div>
+          <div class="cta-row" style="margin-top:12px">
+            <a class="btn btn-call" href="tel:+41779964498" data-i18n="callNow2">Jetzt anrufen</a>
+            <a class="btn btn-wa" href="https://wa.me/41779964498" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <dl>
+            <dt data-i18n="ctDriverLabel">Ihr Fahrer</dt>
+            <dd><strong>Tsehaye Tesfai</strong>, <span data-i18n="ctDriverRole">Inhaber von Shorley Taxi</span></dd>
+            <dt data-i18n="ctEmailLabel">E-Mail</dt>
+            <dd><a href="mailto:tsehayetesfai@icloud.com">tsehayetesfai@icloud.com</a></dd>
+            <dt data-i18n="ctHoursLabel">Verfügbarkeit</dt>
+            <dd data-i18n="ctHours">Rund um die Uhr, 7 Tage die Woche, auch an Sonntagen und Feiertagen</dd>
+            <dt data-i18n="ctBaseLabel">Standort</dt>
+            <dd>Flawil, <span data-i18n="ctCanton">Kanton St. Gallen, Schweiz</span></dd>
+            <dt data-i18n="ctAreaLabel">Einsatzgebiet</dt>
+            <dd>Flawil · Uzwil · Oberuzwil · St. Gallen · <span data-i18n="ctAirport">Flughafen Zürich</span></dd>
+            <dt data-i18n="ctPayLabel">Zahlung</dt>
+            <dd data-i18n="ctPay">Bar oder Karte (Visa, Mastercard)</dd>
+          </dl>
+        </div>
+        <form class="book" id="bookForm">
+          <h3 style="margin-bottom:14px" data-i18n="formTitle">Fahrt vorbestellen</h3>
+          <div class="row">
+            <label><span data-i18n="fName">Ihr Name</span> *
+              <input type="text" id="f-name" required autocomplete="name" />
+            </label>
+            <label><span data-i18n="fPhone">Ihre Telefonnummer</span>
+              <input type="tel" id="f-phone" autocomplete="tel" />
+            </label>
+          </div>
+          <div class="row">
+            <label><span data-i18n="fFrom">Abholort</span> *
+              <input type="text" id="f-from" required />
+            </label>
+            <label><span data-i18n="fTo">Ziel</span> *
+              <input type="text" id="f-to" required />
+            </label>
+          </div>
+          <div class="row">
+            <label><span data-i18n="fDate">Datum</span>
+              <input type="date" id="f-date" />
+            </label>
+            <label><span data-i18n="fTime">Uhrzeit</span>
+              <input type="time" id="f-time" />
+            </label>
+          </div>
+          <div class="row">
+            <label><span data-i18n="fPax">Anzahl Personen</span>
+              <select id="f-pax">
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+              </select>
+            </label>
+            <label><span data-i18n="fLuggage">Gepäck / Bemerkung</span>
+              <input type="text" id="f-note" />
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-wa" data-i18n="formSend">Anfrage per WhatsApp senden</button>
+            <a class="btn btn-outline" href="tel:+41779964498" data-i18n="formOrCall">Stattdessen anrufen</a>
+          </div>
+          <p class="hint" data-i18n="formHint">Das Formular öffnet WhatsApp mit Ihrer ausgefüllten Anfrage. Sie prüfen sie dort und senden sie selbst ab. Es werden keine Daten auf dieser Website gespeichert.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <b>Shorley Taxi</b>
+        <p data-i18n="ftAbout">Ihr Taxi in Flawil und der Region St. Gallen. Persönlich, zuverlässig, rund um die Uhr.</p>
+        <p data-i18n="ftOwner">Inhaber und Fahrer: Tsehaye Tesfai</p>
+      </div>
+      <div>
+        <b data-i18n="ftContact">Kontakt</b>
+        <p><span data-i18n="ftTel">Telefon / WhatsApp:</span><br /><a href="tel:+41779964498">+41 77 996 44 98</a></p>
+        <p><span data-i18n="ftEmail">E-Mail:</span><br /><a href="mailto:tsehayetesfai@icloud.com">tsehayetesfai@icloud.com</a></p>
+        <p><span data-i18n="ftBase">Standort:</span> Flawil, <span data-i18n="ftCanton">Kanton St. Gallen</span></p>
+      </div>
+      <div>
+        <b data-i18n="ftInfo">Gut zu wissen</b>
+        <p data-i18n="ftHours">24 Stunden, 7 Tage die Woche geöffnet.</p>
+        <p data-i18n="ftRoutes">Hauptstrecken: Flawil · Uzwil · Oberuzwil · St. Gallen · Flughafen Zürich</p>
+        <p data-i18n="ftVehicle">Fahrzeug: Škoda Octavia Combi (2023)</p>
+      </div>
+    </div>
+    <div class="fineprint" data-i18n="ftFine">© 2026 Shorley Taxi, Flawil. Alle Preise in CHF gemäss Tarifaushang im Fahrzeug.</div>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="btn btn-call" href="tel:+41779964498" data-i18n="stickyCall">Anrufen</a>
+  <a class="btn btn-wa" href="https://wa.me/41779964498" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var PHONE_WA = "41779964498";
+  var dict = {
+    en: {
+      brandSub: "Flawil · Canton of St. Gallen · 24/7",
+      navServices: "Services", navArea: "Service area", navTariffs: "Tariffs", navVehicle: "Vehicle", navAbout: "About us", navContact: "Contact & booking",
+      heroTitle: "Your taxi in Flawil and St. Gallen, there for you day and night",
+      heroLead: "Shorley Taxi takes you to your destination reliably and on time, in Flawil, Uzwil, Oberuzwil and St. Gallen, and to Zurich Airport. One call is all it takes: we are reachable around the clock.",
+      driverLine: "Your driver: <strong>Tsehaye Tesfai</strong> will pick you up personally.",
+      callNow: "Call now", callNow2: "Call now", phoneLabel: "Phone:",
+      heroCaption: "Our vehicle: Škoda Octavia Combi (2023)",
+      strip1t: "24 hours / 7 days", strip1s: "Also at night, on Sundays and public holidays",
+      strip2t: "Based in Flawil", strip2s: "Quickly on site in the region",
+      strip3t: "Cash & card payment", strip3s: "Visa, Mastercard",
+      strip4t: "Book in advance", strip4s: "Simply reserve your ride in advance",
+      svcTitle: "Our services",
+      svcIntro: "Whether a short trip in the region or an airport transfer, call us or message us on WhatsApp. We are here for you.",
+      svc1t: "Zurich Airport transfer",
+      svc1p: "On time to Zurich Airport and back again, also for early departures and late arrivals. We pick you up at your address, with plenty of room for your luggage in the large boot.",
+      svc2t: "Trips in the region",
+      svc2p: "Short and longer trips in Flawil, Uzwil, Oberuzwil and St. Gallen, to the station, the doctor, shopping, or visiting family and friends.",
+      svc3t: "Long distance trips",
+      svc3p: "Longer trips throughout Switzerland by arrangement. Just ask us. We will be happy to quote for your journey.",
+      svc4t: "Booking in advance",
+      svc4p: "Already know your appointment in advance? Reserve by phone or WhatsApp. We will be there for you, on time, at the agreed time.",
+      areaTitle: "Service area",
+      areaIntro: "We are based in Flawil. From there we drive for you across the region and to Zurich Airport. Other destinations gladly on request.",
+      areaFlawil: "Our base, quickly with you",
+      areaTown: "Trips to and from Uzwil", areaTown2: "Trips to and from Oberuzwil", areaTown3: "Trips to and from St. Gallen",
+      areaAirportName: "Zurich Airport", areaAirport: "Airport transfer, there and back",
+      areaOtherName: "Other destinations", areaOther: "Other destinations on request. Give us a call",
+      areaCall: "Enquire now: +41 77 996 44 98",
+      mapLink: "View on map", mapLink2: "View on map", mapLink3: "View on map", mapLink4: "View on map", mapLink5: "View on map",
+      tarTitle: "Tariffs",
+      tarIntro: "Our prices at a glance. The tariffs displayed in the vehicle apply.",
+      tarHead: "Tariff", tarBase: "Base fee (Basis)", tarKm: "Price per kilometre", tarMin: "Price per minute",
+      tarNote: "All prices in Swiss francs (CHF). We are happy to explain on the phone before your trip which tariff applies and what it covers.",
+      payCash: "Cash payment",
+      tarCaption: "The tariff card displayed in our vehicle.",
+      vehTitle: "Our vehicle", vehYear: "Year",
+      vehText: "You travel in a modern, well maintained Škoda Octavia Combi. The spacious estate offers comfortable room for passengers and a large boot, ideal for airport trips with lots of luggage too.",
+      vehF1: "Large boot, plenty of room for luggage and shopping",
+      vehF2: "Comfortable seats and a smooth ride",
+      vehF3: "Well maintained, clean vehicle",
+      vehF4: "Card payment possible right in the vehicle",
+      galCap: "Front view", galCap2: "Side view",
+      aboutTitle: "About Tsehaye and Shorley Taxi",
+      aboutText: "Shorley Taxi is your personal taxi service in Flawil, run by its owner Tsehaye. With us you always know who is picking you up: one driver, one vehicle, one point of contact. Reliable, on time and reachable around the clock, for trips in the region and to Zurich Airport.",
+      aboutCall: "Call: +41 77 996 44 98", aboutBook: "Book a ride in advance",
+      fanText: "Proud supporter of FC Niederstetten.",
+      ctTitle: "Contact & booking",
+      ctIntro: "No booking is needed. For a ride right away, simply call us. The form is only for booking in advance, when you would like to plan your trip ahead of time.",
+      step1t: "Fill in the form", step1p: "Enter your pickup location, destination, date and time. It takes less than a minute.",
+      step2t: "Check and send in WhatsApp", step2p: "When you submit, WhatsApp opens with your completed request. You check it there and send it yourself, no account and no registration needed.",
+      step3t: "Receive confirmation", step3p: "We reply briefly and confirm your ride. You only pay in the vehicle, in cash or by card.",
+      ctPhoneLabel: "Phone / WhatsApp", ctDriverLabel: "Your driver", ctEmailLabel: "Email", ctDriverRole: "owner of Shorley Taxi", ctHoursLabel: "Availability",
+      ctHours: "Around the clock, 7 days a week, including Sundays and public holidays",
+      ctBaseLabel: "Base", ctCanton: "Canton of St. Gallen, Switzerland",
+      ctAreaLabel: "Service area", ctAirport: "Zurich Airport",
+      ctPayLabel: "Payment", ctPay: "Cash or card (Visa, Mastercard)",
+      formTitle: "Book a ride in advance",
+      fName: "Your name", fPhone: "Your phone number", fFrom: "Pickup location", fTo: "Destination",
+      fDate: "Date", fTime: "Time", fPax: "Number of passengers", fLuggage: "Luggage / note",
+      formSend: "Send request via WhatsApp", formOrCall: "Call instead",
+      formHint: "The form opens WhatsApp with your completed request. You check it there and send it yourself. No data is stored on this website.",
+      ftAbout: "Your taxi in Flawil and the St. Gallen region. Personal, reliable, around the clock.", ftOwner: "Owner and driver: Tsehaye Tesfai",
+      ftContact: "Contact", ftTel: "Phone / WhatsApp:", ftEmail: "Email:", ftBase: "Base:", ftCanton: "Canton of St. Gallen",
+      ftInfo: "Good to know", ftHours: "Open 24 hours, 7 days a week.",
+      ftRoutes: "Main routes: Flawil · Uzwil · Oberuzwil · St. Gallen · Zurich Airport",
+      ftVehicle: "Vehicle: Škoda Octavia Combi (2023)",
+      ftFine: "© 2026 Shorley Taxi, Flawil. All prices in CHF as per the tariff card displayed in the vehicle.",
+      stickyCall: "Call"
+    }
+  };
+  // German strings are read from the DOM on first switch, so the markup stays the single source for DE.
+  var deCache = {};
+  var els = document.querySelectorAll("[data-i18n]");
+  els.forEach(function(el){ deCache[el.getAttribute("data-i18n")] = el.innerHTML; });
+  var altEls = document.querySelectorAll("[data-i18n-alt]");
+  var deAlt = {};
+  altEls.forEach(function(el){ deAlt[el.getAttribute("data-i18n-alt")] = el.getAttribute("alt"); });
+  var enAlt = {
+    heroAlt: "White Škoda Octavia Combi from Shorley Taxi, front view",
+    tarAlt: "Tariff card from the vehicle: Tariffs 1, 2 and 3 with base fee, price per kilometre and price per minute",
+    galAlt1: "Škoda Octavia Combi from Shorley Taxi, front angled view",
+    galAlt2: "Škoda Octavia Combi from Shorley Taxi, front view",
+    galAlt3: "Škoda Octavia Combi from Shorley Taxi, side view",
+    fanCrestAlt: "Crest of FC Niederstetten"
+  };
+  var lang = "de";
+  function setLang(next){
+    lang = next;
+    document.documentElement.lang = next;
+    els.forEach(function(el){
+      var k = el.getAttribute("data-i18n");
+      el.innerHTML = next === "en" ? (dict.en[k] || deCache[k]) : deCache[k];
+    });
+    altEls.forEach(function(el){
+      var k = el.getAttribute("data-i18n-alt");
+      el.setAttribute("alt", next === "en" ? (enAlt[k] || deAlt[k]) : deAlt[k]);
+    });
+    document.getElementById("btn-de").setAttribute("aria-pressed", next === "de" ? "true" : "false");
+    document.getElementById("btn-en").setAttribute("aria-pressed", next === "en" ? "true" : "false");
+    document.title = next === "en"
+      ? "Shorley Taxi Flawil, Owner Tsehaye, Taxi in Flawil, Uzwil, Oberuzwil, St. Gallen and Zurich Airport Transfer, 24/7"
+      : "Shorley Taxi Flawil, Inhaber Tsehaye, Taxi in Flawil, Uzwil, Oberuzwil, St. Gallen und Flughafentransfer Zürich, 24/7";
+  }
+  document.getElementById("btn-de").addEventListener("click", function(){ setLang("de"); });
+  document.getElementById("btn-en").addEventListener("click", function(){ setLang("en"); });
+
+  document.getElementById("bookForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    function v(id){ return document.getElementById(id).value.trim(); }
+    var lines;
+    if (lang === "en") {
+      lines = ["Hello Shorley Taxi, I would like to request a ride.",
+        "Name: " + v("f-name"),
+        v("f-phone") ? "Phone: " + v("f-phone") : null,
+        "Pick-up: " + v("f-from"),
+        "Destination: " + v("f-to"),
+        v("f-date") ? "Date: " + v("f-date") : null,
+        v("f-time") ? "Time: " + v("f-time") : null,
+        "Passengers: " + v("f-pax"),
+        v("f-note") ? "Note: " + v("f-note") : null
+      ];
+    } else {
+      lines = ["Guten Tag Shorley Taxi, ich möchte eine Fahrt anfragen.",
+        "Name: " + v("f-name"),
+        v("f-phone") ? "Telefon: " + v("f-phone") : null,
+        "Abholort: " + v("f-from"),
+        "Ziel: " + v("f-to"),
+        v("f-date") ? "Datum: " + v("f-date") : null,
+        v("f-time") ? "Uhrzeit: " + v("f-time") : null,
+        "Personen: " + v("f-pax"),
+        v("f-note") ? "Bemerkung: " + v("f-note") : null
+      ];
+    }
+    var msg = lines.filter(Boolean).join("\n");
+    window.open("https://wa.me/" + PHONE_WA + "?text=" + encodeURIComponent(msg), "_blank");
+  });
+
+  // Light / dark mode toggle (follows the system setting until toggled; choice lasts for this visit)
+  var themeBtn = document.getElementById("themeToggle");
+  function syncThemeBtn(){
+    var dark = document.documentElement.getAttribute("data-theme") === "dark";
+    themeBtn.setAttribute("aria-label", dark ? "Zum Light Mode wechseln / Switch to light mode" : "Zum Dark Mode wechseln / Switch to dark mode");
+  }
+  themeBtn.addEventListener("click", function(){
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    syncThemeBtn();
+  });
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq.addEventListener) mq.addEventListener("change", function(e){
+      document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light");
+      syncThemeBtn();
+    });
+  }
+  syncThemeBtn();
+
+  // Gentle reveal for cards and photos as they scroll into view.
+  // Content is visible by default; it is only hidden after this code confirms
+  // IntersectionObserver support, and a timed fallback forces everything visible.
+  var revealEls = document.querySelectorAll(".reveal");
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && ("IntersectionObserver" in window) && revealEls.length) {
+    document.documentElement.classList.add("reveal-on");
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.05, rootMargin: "0px 0px 120px 0px" });
+    revealEls.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight + 200) { el.classList.add("in"); }
+      else { io.observe(el); }
+    });
+    setTimeout(function(){ revealEls.forEach(function(el){ el.classList.add("in"); }); }, 1200);
+  }
+})();
+</script>
+</body>
+</html>
