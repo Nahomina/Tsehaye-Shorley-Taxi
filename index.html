@@ -61,7 +61,10 @@
 
   /* Header */
   header.site{ background:var(--header-bg); border-bottom:3px solid var(--yellow); position:sticky; top:0; z-index:50; box-shadow:var(--shadow); transition:background-color .35s ease; }
-  .header-in{ display:flex; align-items:center; gap:10px; padding:10px 0; flex-wrap:wrap; }
+  .header-in{ display:flex; flex-direction:column; gap:6px; padding:10px 0; }
+  .top-lane{ display:flex; justify-content:space-between; align-items:center; width:100%; }
+  .site-logo{ height:52px; width:auto; }
+  .top-controls{ display:flex; align-items:center; gap:10px; }
   .brand{ text-decoration:none; color:var(--ink); line-height:1.15; margin-right:auto; }
   .brand .name{ font-size:24px; font-weight:800; letter-spacing:-.01em; color:var(--ink); }
   .brand .name span{ color:var(--navy); }
@@ -83,7 +86,7 @@
   nav.main a{ color:var(--ink); text-decoration:none; font-size:15px; font-weight:600; padding:11px 12px; display:inline-block; position:relative; }
   nav.main a::after{ content:""; position:absolute; left:12px; right:12px; bottom:6px; height:2px; background:var(--yellow); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
   nav.main a:hover::after{ transform:scaleX(1); }
-  @media (max-width:640px){ nav.main{ display:none; } .brand .name{ font-size:21px; } }
+  @media (max-width:640px){ nav.main{ display:none; } .brand .name{ font-size:21px; } .site-logo{ height:44px; } }
 
   /* Hero */
   .hero{ background:var(--bg-alt); border-bottom:1px solid var(--line); }
@@ -253,18 +256,23 @@
 
 <header class="site">
   <div class="wrap header-in">
+    <div class="top-lane">
+      <img src="taxi-logo.jpg" alt="TAXI" class="site-logo" />
+      <div class="top-controls">
+        <div class="lang-switch" role="group" aria-label="Language / Sprache">
+          <button type="button" id="btn-de" aria-pressed="true">DE</button>
+          <button type="button" id="btn-en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Dark Mode / Light Mode umschalten" title="Dark Mode / Light Mode">
+          <svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+      </div>
+    </div>
     <a class="brand" href="#top">
       <span class="name">TSEHAYE SHORLEY <span>TAXI</span></span><br />
       <span class="sub" data-i18n="brandSub">Flawil · Kanton St. Gallen · 24/7</span>
     </a>
-    <div class="lang-switch" role="group" aria-label="Language / Sprache">
-      <button type="button" id="btn-de" aria-pressed="true">DE</button>
-      <button type="button" id="btn-en" aria-pressed="false">EN</button>
-    </div>
-    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Dark Mode / Light Mode umschalten" title="Dark Mode / Light Mode">
-      <svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-    </button>
   </div>
   <nav class="main" aria-label="Hauptmenü">
     <div class="wrap">
